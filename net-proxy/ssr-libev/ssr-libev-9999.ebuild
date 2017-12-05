@@ -6,11 +6,11 @@ EAPI=6
 inherit autotools eutils systemd git-r3 user
 
 DESCRIPTION="libev port of ShadowsocksR"
-HOMEPAGE="https://github.com/shadowsocksr-backup/shadowsocksr-libev"
+HOMEPAGE="https://github.com/shadowsocksrr/shadowsocksr-libev.git"
 
-EGIT_REPO_URI="https://github.com/shadowsocksr-backup/shadowsocksr-libev.git"
-EGIT_BRANCH="master"
-EGIT_COMMIT="e2373d7199102f383b741da148b989c7c1e8832e"
+EGIT_REPO_URI="https://github.com/shadowsocksrr/shadowsocksr-libev.git"
+EGIT_BRANCH="Akkariiin/develop"
+EGIT_COMMIT="d4904568c0bd7e0861c0cbfeaa43740f404db214"
 
 LICENSE="GPL-3+"
 SLOT="0"
