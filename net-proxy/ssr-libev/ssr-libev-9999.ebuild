@@ -37,6 +37,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	sed -e 's/-Werror//g' -i $S/src/Makefile.am
 	default
 	eautoreconf
 }
