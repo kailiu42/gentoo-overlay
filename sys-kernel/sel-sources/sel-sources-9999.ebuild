@@ -36,7 +36,8 @@ src_prepare() {
 	chmod -R u+w .
 
 	local c=$(git rev-parse --short=7 HEAD)
-	sed -i -e "s/^EXTRAVERSION =$/EXTRAVERSION = -sel.g$c/" Makefile
+	local serial=$(</usr/src/linux-5.10-SEL-2.0/sel-serial)
+	sed -i -e "s/^EXTRAVERSION =$/EXTRAVERSION = -sel.$((++serial)).g$c/" Makefile
 }
 
 src_compile() {
@@ -46,4 +47,6 @@ src_compile() {
 src_install() {
 	dodir /usr/src/
 	cp -RL "${S}/tmp/current" "${D}/usr/src/linux-5.10-SEL-2.0" || die "Install failed!"
+	local serial=$(</usr/src/linux-5.10-SEL-2.0/sel-serial)
+	echo $((++serial)) > ${D}/usr/src/linux-5.10-SEL-2.0/sel-serial
 }
