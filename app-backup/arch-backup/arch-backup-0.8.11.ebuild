@@ -8,7 +8,7 @@ inherit multilib
 
 DESCRIPTION="trivial backup scripts (ssh/smb support)"
 HOMEPAGE="https://github.com/p5n/archlinux-stuff"
-SRC_URI="http://archlinux-stuff.googlecode.com/files/arch-backup-${PV}.tar.gz"
+SRC_URI="https://github.com/p5n/archlinux-stuff/archive/refs/heads/master.zip"
 RESTRICT="mirror"
 
 LICENSE="GPL"
@@ -19,7 +19,7 @@ IUSE=""
 RDEPEND="app-text/txt2man"
 DEPEND="${RDEPEND}"
 
-S=${WORKDIR}/arch-backup-${PV}
+S=${WORKDIR}/archlinux-stuff-master/arch-backup
 
 src_install() {
 	install -D -m 0644 ${S}/arch-backup.conf ${ED}/etc/arch-backup/arch-backup.conf
