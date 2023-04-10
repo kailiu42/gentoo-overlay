@@ -46,6 +46,9 @@ RDEPEND="
 	$(python_gen_cond_dep '
 		dev-python/keyring[${PYTHON_USEDEP}]
 	')
+	$(python_gen_cond_dep '
+		dev-python/pyyaml[${PYTHON_USEDEP}]
+	')
 	${PYTHON_SINGLE_DEPS}
 "
 BDEPEND="
