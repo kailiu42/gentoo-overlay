@@ -3,8 +3,8 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{9..11} )
-PYTHON_REQ_USE="xml"
+PYTHON_COMPAT=( python3_{9..12} )
+#PYTHON_REQ_USE="xml"
 DISTUTILS_SINGLE_IMPL=1
 
 inherit bash-completion-r1 distutils-r1
