@@ -1,6 +1,6 @@
-EAPI=7
+EAPI=8
 
-inherit eutils
+#inherit eutils
 
 if [ ${PV} = 9999 ]; then
 	inherit git-r3
