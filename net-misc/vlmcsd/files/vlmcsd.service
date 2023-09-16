@@ -1,0 +1,13 @@
+[Unit]
+Description=KMS Emulator in C
+After=network.target
+
+[Service]
+Type=simple
+User=nobody
+Group=nobody
+ExecStart=/usr/bin/vlmcsd -i /etc/vlmcsd/vlmcsd.ini -j /etc/vlmcsd/vlmcsd.kmd -L 0.0.0.0:1688 -L [::]:1688 -e -D
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
